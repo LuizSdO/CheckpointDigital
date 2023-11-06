@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Exemplo spring security</title>
+</head>
+<body>
+<div th:if="${param.error}">
+  Usuário ou senha inválido
+</div>
+<div th:if="${param.logout}">
+  você foi deslogado
+</div>
+<form th:action="@{/login}" method="post">
+  <div><label> Nome do usuário : <input type="text" name="username"/> </label></div>
+  <div><label> Senha: <input type="password" name="password"/> </label></div>
+  <div><input type="submit" value="Sign In"/></div>
+</form>
+</body>
+</html>
